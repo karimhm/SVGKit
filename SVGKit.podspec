@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
   s.tvos.deployment_target = '9.0'
   s.summary     = "Display and interact with SVG Images on iOS, using native rendering (CoreAnimation)."
-  s.homepage = 'https://github.com/SVGKit/SVGKit'
+  s.homepage = 'https://github.com/karimhm/SVGKit.git'
   s.author   = { 'Steven Fusco'    => 'github@stevenfusco.com',
                  'adamgit'         => 'adam.m.s.martin@gmail.com',
                  'Kevin Stich'     => 'stich@50cubes.com',
@@ -14,12 +14,10 @@ Pod::Spec.new do |s|
                  'Eric Man'        => 'meric.au@gmail.com',
                  'Matt Rajca'      => 'matt.rajca@me.com',
                  'Moritz Pfeiffer' => 'moritz.pfeiffer@alp-phone.ch' }
-  s.source   = { :git => 'https://github.com/SVGKit/SVGKit.git', :tag => s.version.to_s }
+  s.source   = { :git => 'https://github.com/karimhm/SVGKit.git', :tag => s.version.to_s }
 
   s.source_files = 'Source/*.{h,m}', 'Source/**/*.{h,m}'
-  s.ios.exclude_files = 'Source/AppKit additions/*.{h,m}', 'Source/Exporters/SVGKExporterNSImage.{h,m}'
-  s.tvos.exclude_files = 'Source/AppKit additions/*.{h,m}', 'Source/Exporters/SVGKExporterNSImage.{h,m}'
-  s.osx.exclude_files = 'Source/Exporters/SVGKExporterUIImage.{h,m}'
+  s.exclude_files = 'Source/include/*.h'
   s.libraries = 'xml2'
   s.framework = 'QuartzCore', 'CoreText'
   s.dependency 'CocoaLumberjack', '~> 3.0'
